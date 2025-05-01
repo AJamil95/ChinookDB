@@ -1,6 +1,9 @@
 ﻿# 📚 Proyecto Chinook Data Warehouse
 
 ## Descripción
+La base de datos Chinook es una base de datos de ejemplo que simula una tienda de música digital. Incluye información sobre artistas, álbumes, pistas, géneros, clientes, empleados y facturas.Viene con datos reales extraídos de una biblioteca de iTunes.
+
+## Objetivo
 
 Este proyecto tiene como objetivo:
 
