@@ -63,6 +63,7 @@
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
     <Folder Include="Security\" />
+    <Folder Include="Scripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="staging\Tables\Invoice.sql" />
@@ -75,5 +76,13 @@
     <Build Include="dbo\Tables\FactInvoice.sql" />
     <Build Include="Security\staging.sql" />
     <Build Include="dbo\Tables\PackageConfig.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\DimDate.data.sql" />
+    <None Include="Scripts\PackageConfig.data.sql" />
+    <None Include="Scripts\PatchDimDate.data.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>
