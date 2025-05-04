@@ -1,14 +1,18 @@
 ﻿CREATE TABLE [dbo].[DimCustomer] (
-    [CustomerSK]   INT           IDENTITY (1, 1) NOT NULL,
-    [Nombre]       NVARCHAR (40) NULL,
-    [Apellido]     NVARCHAR (20) NULL,
-    [Email]        NVARCHAR (60) NULL,
-    [Empresa]      NVARCHAR (80) NULL,
-    [Ciudad]       NVARCHAR (40) NULL,
-    [Estado]       NVARCHAR (40) NULL,
-    [Pais]         NVARCHAR (40) NULL,
-    [CodigoPostal] NVARCHAR (10) NULL,
-    [Telefono]     NVARCHAR (24) NULL,
+    [CustomerSK] INT           IDENTITY (1, 1) NOT NULL,
+    [CustomerId] INT           NOT NULL,
+    [FirstName]  NVARCHAR (40) NULL,
+    [LastName]   NVARCHAR (20) NULL,
+    [Company]    NVARCHAR(80),
+    [Address]    NVARCHAR(70),
+    [City]       NVARCHAR(40),
+    [State]      NVARCHAR(40),
+    [Country]    NVARCHAR(40),
+    [PostalCode] NVARCHAR(10),
+    [Phone]      NVARCHAR(24),
+    [Fax]        NVARCHAR(24),
+    [Email] NVARCHAR(60) NOT NULL,
+    [SupportRepName] NVARCHAR(120)
     PRIMARY KEY CLUSTERED ([CustomerSK] ASC)
 );
 

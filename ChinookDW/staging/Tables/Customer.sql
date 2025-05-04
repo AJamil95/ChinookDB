@@ -1,13 +1,16 @@
 ﻿CREATE TABLE [staging].[Customer] (
-    [CustomerId]   INT           NULL,
-    [Nombre]       NVARCHAR (40) NULL,
-    [Apellido]     NVARCHAR (20) NULL,
-    [Email]        NVARCHAR (60) NULL,
-    [Empresa]      NVARCHAR (80) NULL,
-    [Ciudad]       NVARCHAR (40) NULL,
-    [Estado]       NVARCHAR (40) NULL,
-    [Pais]         NVARCHAR (40) NULL,
-    [CodigoPostal] NVARCHAR (10) NULL,
-    [Telefono]     NVARCHAR (24) NULL
+    [CustomerSK]   INT           NULL,
+    [FirstName]    NVARCHAR (40) NOT NULL,
+    [LastName]     NVARCHAR (20) NOT NULL,
+    [Company]      NVARCHAR (80) NULL,
+    [Address]      NVARCHAR (70) NULL,
+    [City]         NVARCHAR (40) NULL,
+    [State]        NVARCHAR (40) NULL,
+    [Country]      NVARCHAR (40) NULL,
+    [PostalCode]   NVARCHAR (10) NULL,
+    [Phone]        NVARCHAR (24) NULL,
+    [Fax]          NVARCHAR (24) NULL,
+    [Email]        NVARCHAR (60) NOT NULL,
+    [SupportRepName] NVARCHAR(120)           NULL
 );
 

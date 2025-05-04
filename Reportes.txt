@@ -1,0 +1,7 @@
+Ventas por cliente: Reporte para identificar a los clientes que generan más ingresos y ofrecerles promociones o beneficios especiales.
+
+Ventas por género musical: Necesitamos saber qué géneros son más populares para enfocar nuestras campañas de marketing y adquisiciones de contenido.
+
+Ventas mensuales: Análisis de las ventas mensuales para identificar tendencias y tomar decisiones estratégicas sobre inventarios y promociones.
+
+Ventas por Álbum: Análisis del ingreso total generado por cada álbum, basado en las ventas de sus pistas individuales. Permite identificar los álbumes más rentables y tomar decisiones sobre promoción o producción.
