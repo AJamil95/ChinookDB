@@ -63,17 +63,30 @@
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
     <Folder Include="Security\" />
+    <Folder Include="Scripts" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="staging\Tables\Invoice.sql" />
-    <Build Include="staging\Tables\Track.sql" />
-    <Build Include="staging\Tables\Customer.sql" />
-    <Build Include="staging\Tables\Employee.sql" />
-    <Build Include="dbo\Tables\DimTrack.sql" />
-    <Build Include="dbo\Tables\DimCustomer.sql" />
-    <Build Include="dbo\Tables\DimEmployee.sql" />
-    <Build Include="dbo\Tables\DimDate.sql" />
-    <Build Include="dbo\Tables\FactInvoice.sql" />
     <Build Include="Security\staging.sql" />
+    <Build Include="dbo\Tables\FactSales.sql" />
+    <Build Include="dbo\Tables\DimTrack.sql" />
+    <Build Include="dbo\Tables\DimGenre.sql" />
+    <Build Include="dbo\Tables\DimDate.sql" />
+    <Build Include="dbo\Tables\DimCustomer.sql" />
+    <Build Include="dbo\Tables\DimAlbum.sql" />
+    <Build Include="staging\Tables\Track.sql" />
+    <Build Include="staging\Tables\Sales.sql" />
+    <Build Include="staging\Tables\Genre.sql" />
+    <Build Include="staging\Tables\Customer.sql" />
+    <Build Include="staging\Tables\Album.sql" />
+    <Build Include="dbo\Tables\PackageConfig.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ChinookDW.publish.xml" />
+    <None Include="Scripts\DimDate.data.sql" />
+    <None Include="Scripts\PackageConfig.data.sql" />
+    <None Include="Scripts\PatchDimDate.data.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>
