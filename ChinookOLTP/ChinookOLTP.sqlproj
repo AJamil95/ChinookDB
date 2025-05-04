@@ -60,6 +60,7 @@
     <Folder Include="Properties" />
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
+    <Folder Include="Scripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Album.sql" />
@@ -73,5 +74,21 @@
     <Build Include="dbo\Tables\Playlist.sql" />
     <Build Include="dbo\Tables\PlaylistTrack.sql" />
     <Build Include="dbo\Tables\Track.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Genre.data.sql" />
+    <None Include="Scripts\MediaType.data.sql" />
+    <None Include="Scripts\Artist.data.sql" />
+    <None Include="Scripts\Album.data.sql" />
+    <None Include="Scripts\Track.data.sql" />
+    <None Include="Scripts\Employee.data.sql" />
+    <None Include="Scripts\Customer.data.sql" />
+    <None Include="Scripts\Invoice.data.sql" />
+    <None Include="Scripts\InvoiceLine.data.sql" />
+    <None Include="Scripts\Playlist.data.sql" />
+    <None Include="Scripts\PlaylistTrack.data.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment1.sql" />
   </ItemGroup>
 </Project>
