@@ -71,9 +71,9 @@
     <Build Include="staging\Tables\Employee.sql" />
     <Build Include="dbo\Tables\DimTrack.sql" />
     <Build Include="dbo\Tables\DimCustomer.sql" />
-    <Build Include="dbo\Tables\DimEmployee.sql" />
     <Build Include="dbo\Tables\DimDate.sql" />
     <Build Include="dbo\Tables\FactInvoice.sql" />
     <Build Include="Security\staging.sql" />
+    <Build Include="dbo\Tables\PackageConfig.sql" />
   </ItemGroup>
 </Project>
