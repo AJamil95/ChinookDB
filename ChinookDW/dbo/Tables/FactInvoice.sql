@@ -1,18 +1,16 @@
 ﻿CREATE TABLE [dbo].[FactInvoice] (
     [InvoiceId]     INT             NOT NULL,
-    [DimCustomerSK] INT             NULL,
-    [DimEmployeeSK] INT             NULL,
-    [DimTrackSK]    INT             NULL,
-    [DateKey]       INT             NULL,
-    [FechaFactura]  DATE            NULL,
-    [MontoTotal]    NUMERIC (10, 2) NULL,
-    [InvoiceLineId] INT             NULL,
+    [TrackId]       INT             NOT NULL,
+    [CustomerSK] INT             NOT NULL,
+    [TrackSK]    INT             NOT NULL,
+    [InvoiceDateKey]  INT            NOT NULL,
+    [InvoiceDate]  DATE            NOT NULL,
+    [Total]    NUMERIC (10, 2) NULL,
     [UnitPrice]     NUMERIC (10, 2) NULL,
     [Quantity]      INT             NULL,
     CONSTRAINT [PK_FactInvoice] PRIMARY KEY CLUSTERED ([InvoiceId] ASC),
-    CONSTRAINT [FK_FactInvoice_DimCustomer] FOREIGN KEY ([DimCustomerSK]) REFERENCES [dbo].[DimCustomer] ([CustomerSK]),
-    CONSTRAINT [FK_FactInvoice_DimDate] FOREIGN KEY ([DateKey]) REFERENCES [dbo].[DimDate] ([DateKey]),
-    CONSTRAINT [FK_FactInvoice_DimEmployee] FOREIGN KEY ([DimEmployeeSK]) REFERENCES [dbo].[DimEmployee] ([EmployeeSK]),
-    CONSTRAINT [FK_FactInvoice_DimTrack] FOREIGN KEY ([DimTrackSK]) REFERENCES [dbo].[DimTrack] ([TrackSK])
+    CONSTRAINT [FK_FactInvoice_DimCustomer] FOREIGN KEY ([CustomerSK]) REFERENCES [dbo].[DimCustomer] ([CustomerSK]),
+    CONSTRAINT [FK_FactInvoice_DimDate] FOREIGN KEY ([InvoiceDateKey]) REFERENCES [dbo].[DimDate] ([DateKey]),
+    CONSTRAINT [FK_FactInvoice_DimTrack] FOREIGN KEY ([TrackSK]) REFERENCES [dbo].[DimTrack] ([TrackSK])
 );
 
