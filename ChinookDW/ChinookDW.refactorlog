@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="df8cdf14-ada6-4cd1-b993-f163120b6903" ChangeDateTime="05/04/2025 08:10:20">
+    <Property Name="ElementName" Value="[dbo].[DimTrack].[GenreId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DimTrack]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="GenreName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9c80778f-e9f8-48d5-b543-c16bd2464c39" ChangeDateTime="05/04/2025 08:13:45">
+    <Property Name="ElementName" Value="[dbo].[DimCustomer].[SupportRepId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DimCustomer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SupportRepName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="265c4886-57ae-4afe-a2fa-9c7f36e3c38a" ChangeDateTime="05/04/2025 08:18:01">
+    <Property Name="ElementName" Value="[dbo].[DimTrack].[AlbumId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DimTrack]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AlbumTitle" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0d703107-7fb2-4740-8c21-207146f2c6b7" ChangeDateTime="05/04/2025 08:19:35">
+    <Property Name="ElementName" Value="[dbo].[DimTrack].[MediaTypeId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DimTrack]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MediaTypeName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e52e5fba-1865-4544-a766-f7e14b4c53a3" ChangeDateTime="05/04/2025 08:25:51">
+    <Property Name="ElementName" Value="[staging].[Customer].[SupportRepId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[staging].[Customer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SupportRepName" />
+  </Operation>
+</Operations>
