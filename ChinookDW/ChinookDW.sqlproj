@@ -64,6 +64,7 @@
     <Folder Include="dbo\Tables\" />
     <Folder Include="Security\" />
     <Folder Include="Scripts" />
+    <Folder Include="dbo\Stored Procedures\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\staging.sql" />
@@ -75,6 +76,11 @@
     <Build Include="staging\Tables\Sales.sql" />
     <Build Include="staging\Tables\Customer.sql" />
     <Build Include="dbo\Tables\PackageConfig.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateLastPackageRowVersion.sql" />
+    <Build Include="dbo\Stored Procedures\GetLastPackageRowVersion.sql" />
+    <Build Include="dbo\Stored Procedures\DW_MergeFactSales.sql" />
+    <Build Include="dbo\Stored Procedures\DW_MergeDimTrack.sql" />
+    <Build Include="dbo\Stored Procedures\DW_MergeDimCustomer.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ChinookDW.publish.xml" />
