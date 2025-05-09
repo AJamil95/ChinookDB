@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="ChinookDS">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=localhost;Initial Catalog=ChinookDWTest</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>b478adc5-d29d-4f95-a947-850f1f7ba961</DataSourceID>
+</RptDataSource>
