@@ -81,6 +81,12 @@
     <Build Include="dbo\Stored Procedures\DW_MergeFactSales.sql" />
     <Build Include="dbo\Stored Procedures\DW_MergeDimTrack.sql" />
     <Build Include="dbo\Stored Procedures\DW_MergeDimCustomer.sql" />
+    <Build Include="dbo\Stored Procedures\GetYears.sql" />
+    <Build Include="dbo\Stored Procedures\GetSalesByTrack.sql" />
+    <Build Include="dbo\Stored Procedures\GetSalesByGenre.sql" />
+    <Build Include="dbo\Stored Procedures\GetSalesByCustomer.sql" />
+    <Build Include="dbo\Stored Procedures\GetSalesByAlbum.sql" />
+    <Build Include="dbo\Stored Procedures\GetMonths.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ChinookDW.publish.xml" />
