@@ -359,7 +359,7 @@
           },
           {
             "type": "calculated",
-            "name": "GrossSales",
+            "name": "TotalSale",
             "dataType": "double",
             "isDataTypeInferred": true,
             "expression": "[Quantity]*[UnitPrice]"
@@ -383,12 +383,20 @@
         ],
         "measures": [
           {
-            "name": "TotalGrossSales",
-            "expression": "SUM(Sales[GrossSales])"
+            "name": "TotalSales",
+            "expression": "SUM(Sales[TotalSale])"
           },
           {
-            "name": "TotalSales",
+            "name": "NumberSales",
             "expression": " DISTINCTCOUNT(Sales[InvoiceId])"
+          },
+          {
+            "name": "QuantitySold",
+            "expression": "SUM(Sales[Quantity])"
+          },
+          {
+            "name": "AverageSale",
+            "expression": "ROUND(DIVIDE([TotalSales],[NumberSales]),2)"
           }
         ]
       }
@@ -443,7 +451,98 @@
             "name": "Sales",
             "measures": [
               {
-                "name": "TotalGrossSales"
+                "name": "TotalSales"
+              },
+              {
+                "name": "NumberSales"
+              },
+              {
+                "name": "AverageSale"
+              },
+              {
+                "name": "QuantitySold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Marketing",
+        "tables": [
+          {
+            "name": "Date",
+            "columns": [
+              {
+                "name": "CalendarYear"
+              },
+              {
+                "name": "MonthName"
+              }
+            ]
+          },
+          {
+            "name": "Sales",
+            "measures": [
+              {
+                "name": "QuantitySold"
+              },
+              {
+                "name": "TotalSales"
+              }
+            ]
+          },
+          {
+            "name": "Track",
+            "columns": [
+              {
+                "name": "AlbumTitle"
+              },
+              {
+                "name": "ArtistName"
+              },
+              {
+                "name": "GenreName"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Customer",
+        "tables": [
+          {
+            "name": "Customer",
+            "columns": [
+              {
+                "name": "Company"
+              },
+              {
+                "name": "Country"
+              },
+              {
+                "name": "CustomerName"
+              }
+            ]
+          },
+          {
+            "name": "Date",
+            "columns": [
+              {
+                "name": "CalendarYear"
+              },
+              {
+                "name": "MonthName"
+              }
+            ]
+          },
+          {
+            "name": "Sales",
+            "measures": [
+              {
+                "name": "NumberSales"
+              },
+              {
+                "name": "QuantitySold"
               },
               {
                 "name": "TotalSales"
