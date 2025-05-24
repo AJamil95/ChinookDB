@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Customer"
   DTS:PackageType="5"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{E415CB54-B7E3-4AD8-87E4-FF5ACD16B10C}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{D315E249-2042-421A-83CF-DC3C9B9A1483}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=ChinookOLTPTest;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Customer-{806ED65C-58DF-4252-873E-069129614AB1}localhost.ChinookOLTP;" />
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=ChinookOLTP;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Customer-{806ED65C-58DF-4252-873E-069129614AB1}localhost.ChinookOLTP;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=ChinookDWTest;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Customer-{AE3E842D-ECE1-4FF3-A9FE-C83781B7A090}localhost.ChinookDW;" />
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=ChinookDW;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Customer-{AE3E842D-ECE1-4FF3-A9FE-C83781B7A090}localhost.ChinookDW;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -1276,29 +1276,41 @@ where [refTable].[CustomerId] = ?</property>
       DTS:To="Package\Update Config" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
-<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
-<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
   Version="8">
-  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="171.2,41.6"
+          Size="156.666666666667,41.3333333333334"
+          Id="Package\Clean-Up"
+          TopLeft="309.999983062347,188.933332019515" />
+        <NodeLayout
+          Size="171.333333333334,41.3333333333334"
           Id="Package\Get DB RowVersion"
           TopLeft="309.999983062347,32.933333104319" />
         <NodeLayout
-          Size="194.4,41.6"
+          Size="194.666666666667,41.3333333333334"
           Id="Package\Get LastRowVersion"
           TopLeft="299.166650320921,113.533332543837" />
         <NodeLayout
-          Size="156.8,41.6"
-          Id="Package\Clean-Up"
-          TopLeft="309.999983062347,188.933332019515" />
+          Size="154.666666666667,41.3333333333334"
+          Id="Package\Load Customers"
+          TopLeft="307.499983198941,270.399998119672" />
+        <NodeLayout
+          Size="140,41.3333333333334"
+          Id="Package\Sync Staging"
+          TopLeft="311.666649637951,358.79999750495" />
+        <NodeLayout
+          Size="144.666666666667,41.3333333333334"
+          Id="Package\Update Config"
+          TopLeft="303.333316759931,438.266664075189" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="395.983316691634,74.533333104319">
@@ -1343,10 +1355,6 @@ where [refTable].[CustomerId] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Load Customers"
-          TopLeft="307.499983198941,270.399998119672" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 2]"
           TopLeft="386.549983130644,230.533332019515">
@@ -1369,10 +1377,6 @@ where [refTable].[CustomerId] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="140,41.6"
-          Id="Package\Sync Staging"
-          TopLeft="311.666649637951,358.79999750495" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 3]"
           TopLeft="383.183316418446,311.999998119672">
@@ -1395,10 +1399,6 @@ where [refTable].[CustomerId] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="144.8,41.6"
-          Id="Package\Update Config"
-          TopLeft="303.333316759931,438.266664075189" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 4]"
           TopLeft="378.699983198941,400.39999750495">
@@ -1551,30 +1551,7 @@ where [refTable].[CustomerId] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Customers\Búsqueda">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimCustomer]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load Customers\Load Staging">
+    design-time-name="Package\Load Customers\Load Customer">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1587,7 +1564,30 @@ where [refTable].[CustomerId] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Customers\Load Customer">
+    design-time-name="Package\Load Customers\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCustomer]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Customers\Load Staging">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
