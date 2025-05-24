@@ -11,13 +11,15 @@
           "protocol": "tds",
           "address": {
             "server": "localhost",
-            "database": "ChinookDWTest"
+            "database": "ChinookDW"
           },
           "authentication": null,
           "query": null
         },
         "credential": {
           "AuthenticationKind": "UsernamePassword",
+          "kind": "SQL",
+          "path": "localhost;ChinookDW",
           "Username": "sa",
           "EncryptConnection": false
         }
